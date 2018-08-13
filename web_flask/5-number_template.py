@@ -67,10 +67,7 @@ def display_HTML(n):
     Returns:
         HTML page
     """
-    message = '<!DOCTYPE html>\n<HTML lang="en">\n    <HEAD>\n     \
-    <TITLE>HBNB</TITLE>\n    </HEAD>\n    <BODY>\n    \
-    <H1>Number: %d</H1>\n    </BODY>\n</HTML>'
-    return message % n
+    return render_template('5-number.html', n=n)
 
 
 if __name__ == "__main__":
