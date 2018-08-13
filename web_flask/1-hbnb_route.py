@@ -8,13 +8,19 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
-    """displays text"""
+    """displays text
+    Returns:
+        text
+    """
     return "Hello HBNB!"
 
 
 @app.route('/hbnb', strict_slashes=False)
 def display_hbnb():
-    """displays text"""
+    """displays text
+    Returns:
+        text
+    """
     return "HBNB"
 
 
