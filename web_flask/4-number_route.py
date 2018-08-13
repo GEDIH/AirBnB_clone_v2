@@ -52,9 +52,9 @@ def display_python(text):
 def display_num(n):
     """displays text
     Args:
-        text (str): text
+        n (int): number
     Returns:
-        text
+        string
     """
     return "%d is a number" % n
 
