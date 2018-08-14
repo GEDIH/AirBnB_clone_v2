@@ -39,9 +39,7 @@ class FileStorage:
                     if cls.__name__ == key.split('.')[0]:
                         fs_objects[key] = val
         else:
-            for key, val in FileStorage.__objects.items():
-                fs_objects[key] = val
-        print(fs_objects)
+            return self.__objects
         return fs_objects
 
     def new(self, obj):
