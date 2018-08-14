@@ -28,19 +28,22 @@ class FileStorage:
         '''
             Return the dictionary
         '''
-        # print("in filestorage.py all")
-        # print(self.__objects)
-        return self.__objects
-        """
+        fs_objects = {}
         if cls:
-            new_dict = {}
-            for key, val in self.__objects.items():
-                if val.__class__.__name__ == cls.__name__:
-                    new_dict[key] = val
-            return new_dict
+            if type(cls) is str and cls in classes:
+                for key, val in self.__objects.items():
+                    if cls == key.split('.')[0]:
+                        fs_objects[key] = val
+            elif cls.__name__ in classes:
+                for key, val in self.__objects.items():
+                    if cls.__name__ == key.split('.')[0]:
+                        fs_objects[key] = val
         else:
-            return self.__objects
-        """
+            for key, val in FileStorage.__objects.items():
+                fs_objects[key] = val
+        print(fs_objects)
+        return fs_objects
+
     def new(self, obj):
         '''
             Set in __objects the obj with key <obj class name>.id
@@ -58,10 +61,6 @@ class FileStorage:
         objects_dict = {}
         for key, val in FileStorage.__objects.items():
             objects_dict[key] = val.to_dict()
-        # print("in save of filestorage.py")
-        # print(FileStorage.__objects)
-        # print(objects_dict)
-        # print("STOP")
         with open(FileStorage.__file_path, mode='w', encoding="UTF8") as fd:
             json.dump(objects_dict, fd)
 
@@ -76,8 +75,6 @@ class FileStorage:
                 class_name = val["__class__"]
                 class_name = classes[class_name]
                 FileStorage.__objects[key] = class_name(**val)
-            # print("in file_storage.py reload")
-            # print(FileStorage.__objects)
         except FileNotFoundError:
             pass
 
@@ -91,9 +88,8 @@ class FileStorage:
                 del self.__objects[key]
         self.save()
 
+    def close(self):
         """
-        if obj is not None:
-            self.__objects.pop(obj.__class__.__name__
-        + "." + str(obj.id), None)
-            self.save()
+        call reload
         """
+        self.reload()

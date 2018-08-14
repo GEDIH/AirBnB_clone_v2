@@ -33,8 +33,10 @@ class State(BaseModel, Base):
             equals to the current State.id
             """
             list_cities = []
-            all_cities = self.cities
-            for city in all_cities:
-                if city.state_id == State.id:
-                    list_cities.append(city)
+            all_cities = models.storage.all(City)
+            all_states = models.storage.all(State)
+            for k, state_obj in all_states.items():
+                for key, city_obj in all_cities.items():
+                    if city_obj.state_id == state_obj.id:
+                        list_cities.append(city_obj)
             return list_cities
