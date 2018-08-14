@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""class Flask"""
 from flask import Flask
 """class Flask"""
 
