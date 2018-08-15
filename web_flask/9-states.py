@@ -20,7 +20,10 @@ def list_all_states():
     Returns:
         HTML
     """
-    all_states = storage.all(State)
+    dict_states = storage.all(State)
+    all_states = []
+    for k, v in dict_states.items():
+        all_states.append(v)
     return render_template('9-states.html', all_states=all_states)
 
 
@@ -32,7 +35,10 @@ def find_state(id):
     Returns:
         HTML
     """
-    all_states = storage.all(State)
+    dict_states = storage.all(State)
+    all_states = []
+    for k, v in dict_states.items():
+        all_states.append(v)
     return render_template('9-states.html', all_states=all_states, id=id)
 
 

@@ -4,14 +4,23 @@
         <TITLE>HBNB</TITLE>
     </HEAD>
     <BODY>
-      {% for state, state_obj in all_states.items() if state_obj.id == id %}
-      <H1>State: {{ state_obj.name }}</H1>
+      {% if id %}
+      {% for state in all_states if state.id == id %}
+      <H1>State: {{ state.name }}</H1>
       <H3>Cities:</H3>
       <UL>
-	{% for city in state_obj.cities | sort(attribute='name') %}
+	{% for city in state.cities | sort(attribute='name') %}
 	<LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
 	{% endfor %}
       </UL>
       {% endfor %}
+      {% else %}
+      <H1>States</H1>
+      <UL>
+	{% for state in all_states | sort(attribute="name") %}
+        <LI>{{ state.id }}: <B>{{ state.name }}</B></LI>
+	{% endfor %}
+      </UL>
+      {% endif %}
     </BODY>
 </HTML>
