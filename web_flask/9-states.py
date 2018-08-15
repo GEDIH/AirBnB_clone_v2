@@ -37,9 +37,12 @@ def find_state(id):
     """
     dict_states = storage.all(State)
     all_states = []
+    all_states_id = []
     for k, v in dict_states.items():
+        all_states_id.append(v.id)
         all_states.append(v)
-    return render_template('9-states.html', all_states=all_states, id=id)
+    return render_template('9-states.html', all_states=all_states,
+                           all_states_id=all_states_id, id=id)
 
 
 if __name__ == "__main__":
