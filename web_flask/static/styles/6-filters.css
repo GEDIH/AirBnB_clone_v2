@@ -57,7 +57,7 @@ button:hover{
     border-radius: 4px;
     margin-top: 7%;
     padding-bottom: 10%;
-    overflow: auto;
+    overflow: scroll;
     max-height: 300px;
 
 }
