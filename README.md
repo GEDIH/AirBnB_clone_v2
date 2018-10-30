@@ -1,47 +1,56 @@
-# 0x01. AirBnB clone - Web static
-![webstatic_diagram](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step1.png)
+# AirBnB clone_v2 - MySQL, deploy web static, web framework
 
+![hbnb](https://camo.githubusercontent.com/a0c52a69dc410e983b8c63fa4aa57e83cb4157cd/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f696e7472616e65742d70726f6a656374732d66696c65732f686f6c626572746f6e7363686f6f6c2d6869676865722d6c6576656c5f70726f6772616d6d696e672b2f3236332f4842544e2d68626e622d46696e616c2e706e67)
+
+## Table of Contents
+
+* [Description](#description)
+* [Purpose](#purpose)
+* [Requirements](#requirements)
+* [File Structure](#file-structure)
+* [Usage](#usage)
+* [Examples](#examples)
+* [Bugs](#bugs)
+* [Authors](#authors)
+* [License](#license)
+
+## Description
+
+**hbnb** is a full-stack clone of the web application [AirBnB](https://www.airbnb.com/). This clone was built in four iterative phases. This version includes completion of Phase 1 from [AirBnB_clone_v1: Console and web static](https://github.com/bchen528/AirBnB_clone_v1) plus Phase 2, which has three parts: 1) adding a MySQL database storage system and mapping models to a database table using object relational mapping, 2) deploying web static by creating and configuring a web server, and 3) converting static HTML page into a dynamic HTML page using Flask and Jinja2.
+
+### Part 1: Add a MySQL database storage system
+![mysql_diagram](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step2.png)
+
+### Part 2: Deploy web static with Fabric
+![web_static_deployment](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/288/aribnb_diagram_0.jpg?cache=off)
+
+### Part 3: Build a web framework with Flask
+![webframwork](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step3.png)
+
+**Links to other versions:**
+* [AirBnB_clone_v1: Console and web static](https://github.com/bchen528/AirBnB_clone_v1)
+* [AirBnB_clone_v3: RESTful API](https://github.com/bchen528/AirBnB_clone_v3)
+* [AirBnB_clone_v4: Web dynamic](https://github.com/bchen528/AirBnB_clone_v4) (Final version!)
+
+## Purpose
+The purpose of Phase 2 is to learn how to:
+* create a MySQL database
+* use ORM
+* map a Python class to a MySQL table
+* handle 2 different storage engines in same codebase
+* use environmental variables
+* deploy code on a server
+* use Fabric for executing local or remote shell commands, uploading/downloading files, prompting the running user for input, or aborting execution. Fabric is taking care of all network connections (SSH, SCP etc.): it's an easy tool for transferring files and executing commands from local to a remote server.
+* manage Nginx configurations
+* build a web framework with Flask
+* define routes in Flask
+* create HTML response in Flask using a template
+* create dynamic template with Jinja2
+* display data from MySQL database in HTML
 
 ## File Descriptions
- * [web_static](web_static) - contains HTML, CSS, and images files
-   * [0-index.html](web_static/0-index.html) - a basic HTML page that contains a header and footer like below:
-   ![0-index.html](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/0-index.png)
+  Note: Below highlights only new file additions for Phase 2. For Phase 1 file descriptions, click [here](https://github.com/bchen528/AirBnB_clone_v1).
   
-   * [1-index.html](web_static/1-index.html) - an HTML page that displays a header and a footer by using the style tag in the head tag (same display as 0-index.html)
 
-   * [2-index.html](web_static/2-index.html) - an HTML page that displays a header and a footer by using CSS files (same display as 1-index.html)
-
-   * [3-index.html](web_static/3-index.html) - an HTML page that displays a header and footer by using CSS files to display like below:
-   ![3-index.html](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/3-index.png)
-
-   * [4-index.html](web_static/4-index.html) - an HTML page that displays a header, footer and a filters box with a search button
-   ![4-index.html](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/4-index.png)
-
-   * [5-index.html](web_static/5-index.html) - an HTML page that displays a header, footer and a filters box
-   ![5-index.html](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/5-index.png)
-
-   * [6-index.html](web_static/6-index.html) - an HTML page that displays a header, footer and a filters box with dropdown
-   ![6-index.html_part1](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/6-index_0.png)
-   ![6-index.html_part2](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/6-index_1.png)
-
-   * [7-index.html](web_static/7-index.html) - an HTML page that displays a header, footer, a filters box with dropdown and results
-   ![7-index.html](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/7-index.png)
-
-   * [8-index.html](web_static/8-index.html) - an HTML page that displays a header, a footer, a filter box (dropdown list) and the result of the search
-   ![8-index.html](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/8-index.png)
-   
-   * [styles](web_static/styles) - contains CSS files
-      * [2-common.css](web_static/styles/2-common.css) - global (i.e. body) style
-      * [2-header.css](web_static/styles/2-header.css) - header style
-      * [2-footer.css](web_static/styles/2-footer.css) - footer style
-      * [3-common.css](web_static/styles/3-common.css) - body style
-      * [3-header.css](web_static/styles/3-header.css) - header style
-      * [3-footer.css](web_static/styles/3-footer.css) - footer style
-      * [4-common.css](web_static/styles/4-common.css) - body style
-      * [4-filters.css](web_static/styles/4-filters.css) - filters style
-      * [5-filters.css](web_static/styles/5-filters.css) - filters style
-      * [6-filters.css](web_static/styles/6-filters.css) - filters style
-      * [7-places.css](web_static/styles/7-places.css) - places style
-      * [8-places.css](web_static/styles/8-places.css) - places style
   
   
