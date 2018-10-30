@@ -137,6 +137,20 @@ The purpose of Phase 2 is to learn how to:
       * [6-filters.css](web_flask/static/styles/6-filters.css) - filter styles
       * [8-places.css](web_flask/static/styles/8-places.css) - places styles
 
+## Usage
+Run the following in your terminal:
+```
+user@ubuntu:~/AirBnB_v2$ curl -o 100-dump.sql "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb.sql"
+user@ubuntu:~/AirBnB_v2$ cat 100-dump.sql | mysql -uroot -p
+Enter password: 
+user@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_flask.100-hbnb
+* Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+....
+```
+Open up a web browser and type `0.0.0.0:5000/hbnb`
+Voila! You should see a lovely webpage like below:
+  ![8-index.html_part0](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb_0.jpg)
+
 ## Bugs
 
 At this time, there are no known bugs.
