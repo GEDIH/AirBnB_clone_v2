@@ -7,7 +7,7 @@
 * [Description](#description)
 * [Purpose](#purpose)
 * [Requirements](#requirements)
-* [File Structure](#file-structure)
+* [File Descriptions](#file-descriptions)
 * [Usage](#usage)
 * [Examples](#examples)
 * [Bugs](#bugs)
