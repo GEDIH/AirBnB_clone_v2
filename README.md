@@ -30,6 +30,6 @@
    ![8-index.html](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/8-index.png)
    
    * [styles](web_static/styles) - contains CSS files
-    * [2-common.css](web_static/styles/2-common.css) - 
+      * [2-common.css](web_static/styles/2-common.css) - 
   
   
