@@ -79,15 +79,15 @@ The purpose of Phase 2 is to learn how to:
       * `__repr__` - returns string representation of instance
       * save - updates `updated_at` attribute for new instance
       * to_dict - returns dictionary representation a BaseModel object
-    * user.py - class User
-    * city.py - class City
-    * state.py - class State
-    * place.py - class Place
+    * [user.py](models/user.py) - class User
+    * [city.py](models/city.py) - class City
+    * [state.py](models/state.py) - class State
+    * [place.py](models/place.py) - class Place
       * `reviews` - get list of Review instances with place_id (equals current Place.id)
       * `amenities` getter - returns list of Amenity instances based on the attribute amenity_ids that contains all Amenity.id linked to the Place
       * `amenities` setter - adds an Amenity.id to attribute amenity_ids if obj is an instance of Amenity
-    * review.py - class Review
-    * amenity.py - class Amenity
+    * [review.py](models/review.py) - class Review
+    * [amenity.py](models/amenity.py) - class Amenity
   * [tests](/tests/) - unit test files
   * [engine](models/engine) - contains storage engines
     * [`__init__.py`](/models/engine/__init__.py) - empty `__init__.py` file for packages
