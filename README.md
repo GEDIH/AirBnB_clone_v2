@@ -99,27 +99,36 @@ The purpose of Phase 2 is to learn how to:
       * `reload` - create all tables in database and current database session
       * `close` - close session
 * [web_flask](web_flask) - contains Flask, templates, and static files
-  * [`__init__.py`](web_flask/__init__.py) - 
-  * [0-hello_route.py](web_flask/0-hello_route.py)
-  * [1-hbnb_route.py](web_flask/1-hbnb_route.py)
-  * [2-c_route.py](web_flask/2-c_route.py)
-  * [3-python_route.py](web_flask/3-python_route.py)
-  * [4-number_route.py](web_flask/4-number_route.py)
-  * [5-number_template.py](web_flask/5-number_template.py)
-  * [6-number_odd_or_even.py](web_flask/6-number_odd_or_even.py)
-  * [7-states_list.py](web_flask/7-states_list.py)
-  * [8-cities_by_states.py](web_flask/8-cities_by_states.py)
-  * [9-states.py](web_flask/9-states.py)
-  * [10-hbnb_filters.py](web_flask/10-hbnb_filters.py)
-  * [100-hbnb.py](web_flask/100-hbnb.py)
+  * [`__init__.py`](web_flask/__init__.py) - import Flask and create a Flask instance
+  * [0-hello_route.py](web_flask/0-hello_route.py) - script that starts a Flask web application where route `/` displays 'Hello HBNB!'
+  * [1-hbnb_route.py](web_flask/1-hbnb_route.py) - script that starts a Flask web application where route `/` displays 'Hello HBNB~' and route `/hbnb` displays 'HBNB'
+  * [2-c_route.py](web_flask/2-c_route.py) - script that starts a Flask web application where route `/` displays 'Hello HBNB!', `/hbnb` displays 'HBNB', `/c/<text>` displays 'C' followed by the value of the text variable (replace underscore `_` symbols with a space ` `
+  * [3-python_route.py](web_flask/3-python_route.py) - script that starts a Flask web application where route `/` displays 'Hello HBNB!', `/hbnb` displays 'HBNB', `/c/<text>` displays 'C' followed by the value of the text variable (replace underscore `_` symbols with a space ` `, `/python/(<text>)` displays 'Python ', followed by the value of the text variable (replace underscore `_` symbols with a space ` `) where the default value of `text` is 'is cool'
+  * [4-number_route.py](web_flask/4-number_route.py) - script that starts a Flask web application where route `/` displays 'Hello HBNB!', `/hbnb` displays 'HBNB', `/c/<text>` displays 'C' followed by the value of the text variable (replace underscore `_` symbols with a space ` `, `/python/(<text>)` displays 'Python ', followed by the value of the text variable (replace underscore `_` symbols with a space ` `) where the default value of `text` is 'is cool', `/number/<n>` displays '`n` is a number' only if n is an integer
+  * [5-number_template.py](web_flask/5-number_template.py) - script that starts a Flask web application where route `/` displays 'Hello HBNB!', `/hbnb` displays 'HBNB', `/c/<text>` displays 'C' followed by the value of the text variable (replace underscore `_` symbols with a space ` `, `/python/(<text>)` displays 'Python ', followed by the value of the text variable (replace underscore `_` symbols with a space ` `) where the default value of `text` is 'is cool', `/number/<n>` displays '`n` is a number' only if n is an integer, `/number_template/<n>` displays an HTML page only if `n` is an integer
+  * [6-number_odd_or_even.py](web_flask/6-number_odd_or_even.py) - script that starts a Flask web application where route `/` displays 'Hello HBNB!', `/hbnb` displays 'HBNB', `/c/<text>` displays 'C' followed by the value of the text variable (replace underscore `_` symbols with a space ` `, `/python/(<text>)` displays 'Python ', followed by the value of the text variable (replace underscore `_` symbols with a space ` `) where the default value of `text` is 'is cool', `/number/<n>` displays '`n` is a number' only if n is an integer, `/number_template/<n>` displays an HTML page only if `n` is an integer, `/number_odd_or_even/<n>` displays an HTML page only if `n` is an integer where `H1` tag includes 'Number: `n` is `even|odd`' in `BODY` tag
+  * [7-states_list.py](web_flask/7-states_list.py) - script that starts a Flask web application where route `/states_list` displays an HTML page with `H1` tag: “States”, `UL` tag: list of all State objects present in DBStorage sorted by name (A->Z), `LI` tag: description of one `State: <state.id>: <B><state.name></B>`
+  * [8-cities_by_states.py](web_flask/8-cities_by_states.py) - script that starts a Flask web application where route `/cities_by_states` displays an HTML page with `H1` tag: “States”, `UL` tag: list of all State objects present in DBStorage sorted by name (A->Z), `LI` tag: description of one `State: <state.id>: <B><state.name></B>`, `LI` tag: description of one `City: <city.id>: <B><city.name></B>`
+  * [9-states.py](web_flask/9-states.py) - script that starts a Flask web application where route `/states` displays an HTML page with `H1` tag: “States”, `UL` tag: list of all State objects present in DBStorage sorted by name (A->Z), `LI` tag: description of one `State: <state.id>: <B><state.name></B>`; route `/states/<id>`displays an HTML page where if a State object is found with this id: `H1` tag: “State: ”, `H3` tag: “Cities:”, `UL` tag: with the list of City objects linked to the State sorted by name (A->Z), `LI` tag: description of one `City: <city.id>: <B><city.name></B>`; Otherwise: `H1` tag: “Not found!”
+  * [10-hbnb_filters.py](web_flask/10-hbnb_filters.py) - script that starts a Flask web application and defines route `/hbnb_filters` to display an HTML page like below:
+  ![6-index.html_part0](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/10-hbnb_filters_0.jpg)
+  ![6-index.html_part1](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/10-hbnb_filters_1.jpg)
+  ![6-index.html_part2](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/10-hbnb_filters_2.jpg)
+  ![6-index.html_part3](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/10-hbnb_filters_3.jpg)
+  * [100-hbnb.py](web_flask/100-hbnb.py) - script that starts a Flask web application and route `/hbnb` displays an HTML page like below:
+  ![8-index.html_part0](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb_0.jpg)
+  ![8-index.html_part1](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb_1.jpg)
+  ![8-index.html_part2](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb_2.jpg)
+  ![8-index.html_part3](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb_3.jpg)
+  ![8-index.html_part4](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb_4.jpg)
   * [templates](web_flask/templates) - contains HTML files
-    * [5-number.html](web_flask/templates/5-number.html)
-    * [6-number_odd_or_even.html](web_flask/templates/6-number_odd_or_even.html)
-    * [7-states_list.html](web_flask/templates/7-states_list.html)
-    * [8-cities_by_states.html](web_flask/templates/8-cities_by_states.html)
-    * [9-states.html](web_flask/templates/9-states.html)
-    * [10-hbnb_filters.html](web_flask/templates/10-hbnb_filters.html)
-    * [100-hbnb.html](web_flask/templates/100-hbnb.html)
+    * [5-number.html](web_flask/templates/5-number.html) - number template
+    * [6-number_odd_or_even.html](web_flask/templates/6-number_odd_or_even.html) - even/odd template
+    * [7-states_list.html](web_flask/templates/7-states_list.html) - list of states template
+    * [8-cities_by_states.html](web_flask/templates/8-cities_by_states.html) - list of cities by states template
+    * [9-states.html](web_flask/templates/9-states.html) - list of states by id template
+    * [10-hbnb_filters.html](web_flask/templates/10-hbnb_filters.html) - filters template
+    * [100-hbnb.html](web_flask/templates/100-hbnb.html) - advanced filters template
   * [static](web_flask/static) - contains CSS and image files
     * [styles](web_flask/static/styles) - contains CSS files
       * [3-header.css](web_flask/static/styles/3-header.css) - header styles
