@@ -128,5 +128,15 @@ The purpose of Phase 2 is to learn how to:
       * [6-filters.css](web_flask/static/styles/6-filters.css) - filter styles
       * [8-places.css](web_flask/static/styles/8-places.css) - places styles
 
-  
-  
+## Bugs
+
+At this time, there are no known bugs.
+
+## Authors
+
+* Becky Chen | [GitHub](https://github.com/bchen528) | [Twitter](https://twitter.com/bchen803)
+* Arik Rosenthal | [GitHub](https://github.com/aDENTinTIME) | [Twitter](https://twitter.com/adentintime)
+
+## License
+
+**hbnb** is open source and free to download and use
