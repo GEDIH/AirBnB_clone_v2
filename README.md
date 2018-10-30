@@ -1,6 +1,7 @@
 # 0x01. AirBnB clone - Web static
 ![webstatic_diagram](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step1.png)
 
+
 ## File Descriptions
  * [web_static](web_static) - contains HTML, CSS, and images files
    * [0-index.html](web_static/0-index.html) - a basic HTML page that contains a header and footer like below:
@@ -30,6 +31,17 @@
    ![8-index.html](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/8-index.png)
    
    * [styles](web_static/styles) - contains CSS files
-      * [2-common.css](web_static/styles/2-common.css) - 
+      * [2-common.css](web_static/styles/2-common.css) - global (i.e. body) style
+      * [2-header.css](web_static/styles/2-header.css) - header style
+      * [2-footer.css](web_static/styles/2-footer.css) - footer style
+      * [3-common.css](web_static/styles/3-common.css) - body style
+      * [3-header.css](web_static/styles/3-header.css) - header style
+      * [3-footer.css](web_static/styles/3-footer.css) - footer style
+      * [4-common.css](web_static/styles/4-common.css) - body style
+      * [4-filters.css](web_static/styles/4-filters.css) - filters style
+      * [5-filters.css](web_static/styles/5-filters.css) - filters style
+      * [6-filters.css](web_static/styles/6-filters.css) - filters style
+      * [7-places.css](web_static/styles/7-places.css) - places style
+      * [8-places.css](web_static/styles/8-places.css) - places style
   
   
