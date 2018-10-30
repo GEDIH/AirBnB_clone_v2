@@ -8,8 +8,8 @@
 * [Purpose](#purpose)
 * [Requirements](#requirements)
 * [File Descriptions](#file-descriptions)
+* [Environmental Variables](#environmental-variables)
 * [Usage](#usage)
-* [Examples](#examples)
 * [Bugs](#bugs)
 * [Authors](#authors)
 * [License](#license)
@@ -47,6 +47,14 @@ The purpose of Phase 2 is to learn how to:
 * create HTML response in Flask using a template
 * create dynamic template with Jinja2
 * display data from MySQL database in HTML
+
+## Requirements
+* All files compiled with Ubuntu 14.04 LTS
+* Documentation
+* Organized files in proper folders (i.e. CSS files should be in `styles` folder)
+* Python unit tests for all files
+* Use SQLAlchemy 1.2.x and MySQL 5.7
+* All files must be pep8 and shellcheck compliant
 
 ## File Descriptions
   **Note:** Below highlights only new file additions for Phase 2. For Phase 1 file descriptions, click [here](https://github.com/bchen528/AirBnB_clone_v1).
@@ -137,6 +145,16 @@ The purpose of Phase 2 is to learn how to:
       * [6-filters.css](web_flask/static/styles/6-filters.css) - filter styles
       * [8-places.css](web_flask/static/styles/8-places.css) - places styles
 
+## Environmental Variables
+```
+HBNB_ENV: running environment. It can be “dev” or “test” for the moment (“production” soon!)
+HBNB_MYSQL_USER: the username of your MySQL
+HBNB_MYSQL_PWD: the password of your MySQL
+HBNB_MYSQL_HOST: the hostname of your MySQL
+HBNB_MYSQL_DB: the database name of your MySQL
+HBNB_TYPE_STORAGE: the type of storage used. It can be “file” (using FileStorage) or db (using DBStorage)
+```
+
 ## Usage
 Run the following in your terminal:
 ```
@@ -147,7 +165,7 @@ user@ubuntu:~/AirBnB_v2$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HB
 * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ....
 ```
-Open up a web browser and type `0.0.0.0:5000/hbnb`
+Open up a web browser and type `0.0.0.0:5000/hbnb`.
 Voila! You should see a lovely webpage like below:
   ![8-index.html_part0](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/290/100-hbnb_0.jpg)
 
