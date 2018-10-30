@@ -1,7 +1,5 @@
-# Synopsis
-
-The Airbnb clone project for which we are creating a copy of the [Airbnb](https://www.airbnb.com/) website.
-Only some features will be implemented and will be listed below once completed.
+# 0x01. AirBnB clone - Web static
+![webstatic_diagram](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step1.png)
 
 
 ## Features
