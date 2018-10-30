@@ -174,9 +174,13 @@ Voila! You should see a lovely webpage like below:
 At this time, there are no known bugs.
 
 ## Authors
-
+Phase 2:
 * Becky Chen | [GitHub](https://github.com/bchen528) | [Twitter](https://twitter.com/bchen803)
 * Arik Rosenthal | [GitHub](https://github.com/aDENTinTIME) | [Twitter](https://twitter.com/adentintime)
+
+Phase 1 codebase: (For practice working with new codebases)
+* Binita Rai | [Github](https://github.com/rayraib)
+* Steven Garcia | [Github](https://github.com/stvngrcia)
 
 ## License
 
