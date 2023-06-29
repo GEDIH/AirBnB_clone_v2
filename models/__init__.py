@@ -1,26 +1,17 @@
 #!/usr/bin/python3
-'''
-    Package initializer
-'''
+"""This module instantiates storage object
+@TODOS:
+    checks HBNB_TYPE_STORAGE environmental variable to determine storage type
+"""
 from os import getenv
+from .user import User
+from .city import City
+from .place import Place
+from .state import State
+from .review import Review
+from .amenity import Amenity
 
-from models.state import State
-from models.city import City
-from models.user import User
-from models.review import Review
-from models.base_model import BaseModel
-from models.amenity import Amenity
-from models.place import Place
-
-
-classes = {"User": User, "BaseModel": BaseModel,
-           "Place": Place, "State": State,
-           "City": City, "Amenity": Amenity,
-           "Review": Review}
-
-storage_type = getenv("HBNB_TYPE_STORAGE")
-
-if storage_type == 'db':
+if getenv('HBNB_TYPE_STORAGE') == 'db':
     from models.engine.db_storage import DBStorage
     storage = DBStorage()
 else:
