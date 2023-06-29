@@ -1,2 +1,2 @@
-__pycache__
-*.pyc
+# cache files
+/**/__pycache__
