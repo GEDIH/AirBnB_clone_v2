@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-''' Test suite for the console'''
-
+''' Test suite for the console''
 import os
 import sys
 import models
